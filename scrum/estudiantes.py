@@ -26,11 +26,7 @@ def validar_telefono(telefono):
 
 
 def registrar_estudiante():
-    """
-    Registra un nuevo estudiante en el sistema.
-    Pide documento, nombre y teléfono, los valida y los guarda.
-    No recibe parámetros ni retorna nada.
-    """
+    
     print("\n========== REGISTRAR ESTUDIANTE ==========")
 
     
@@ -77,10 +73,7 @@ def registrar_estudiante():
 
 
 def mostrar_estudiantes():
-    """
-    Muestra en pantalla todos los estudiantes registrados.
-    No recibe parámetros ni retorna nada.
-    """
+    
     print("\n========== LISTA DE ESTUDIANTES ==========")
 
     estudiantes = cargar_datos(RUTA_ESTUDIANTES)
