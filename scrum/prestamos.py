@@ -6,12 +6,7 @@ from archivos import RUTA_ESTUDIANTES, RUTA_EQUIPOS, RUTA_PRESTAMOS
 
 
 def prestar_equipo():
-    """
-    Registra un préstamo de equipo a un estudiante.
-    Verifica que el estudiante y el equipo existan,
-    y que el equipo esté disponible.
-    No recibe parámetros ni retorna nada.
-    """
+    
     print("\n========== PRÉSTAMO DE EQUIPO ==========")
     
     documento = input("Documento del estudiante: ")
@@ -77,11 +72,6 @@ def prestar_equipo():
 
 
 def devolver_equipo():
-    """
-    Registra la devolución de un equipo prestado.
-    Busca el préstamo activo por código de equipo.
-    No recibe parámetros ni retorna nada.
-    """
     print("\n========== DEVOLVER EQUIPO ==========")
 
     codigo = input("Código del equipo: ")
@@ -117,10 +107,7 @@ def devolver_equipo():
     print(f"Fecha de devolución: {fecha}")
 
 def mostrar_historial():
-    """
-    Muestra en pantalla todos los préstamos registrados.
-    No recibe parámetros ni retorna nada.
-    """
+    
     print("\n========== HISTORIAL DE PRÉSTAMOS ==========")
 
     prestamos = cargar_datos(RUTA_PRESTAMOS)
