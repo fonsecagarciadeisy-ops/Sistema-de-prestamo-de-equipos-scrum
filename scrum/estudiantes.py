@@ -33,50 +33,48 @@ def registrar_estudiante():
     """
     print("\n========== REGISTRAR ESTUDIANTE ==========")
 
-    # Pedir y validar el documento
+    
     documento = input("Documento: ")
     while not validar_documento(documento):
         print(" El documento solo puede contener números.")
         documento = input("Documento: ")
 
-    # Cargar estudiantes actuales
+    
     estudiantes = cargar_datos(RUTA_ESTUDIANTES)
 
-    # Verificar que no exista ya
+    
     for estudiante in estudiantes:
         if estudiante["documento"] == documento:
             print(" El estudiante ya existe.")
             return
 
-    # Pedir y validar el nombre
+    
     nombre = input("Nombre completo: ")
     while not validar_nombre(nombre):
         print(" El nombre solo puede contener letras y espacios.")
         nombre = input("Nombre completo: ")
 
-    # Pedir y validar el teléfono
+    
     telefono = input("Teléfono: ")
     while not validar_telefono(telefono):
         print(" El teléfono solo puede contener números.")
         telefono = input("Teléfono: ")
 
-    # Crear el diccionario del nuevo estudiante
+    
     nuevo_estudiante = {
         "documento": documento,
         "nombre": nombre,
         "telefono": telefono
     }
 
-    # Agregar a la lista y guardar
+    
     estudiantes.append(nuevo_estudiante)
     guardar_datos(RUTA_ESTUDIANTES, estudiantes)
 
     print("Estudiante registrado correctamente.")
 
 
-# ==============================
-# MOSTRAR ESTUDIANTES
-# ==============================
+
 
 def mostrar_estudiantes():
     """
@@ -115,3 +113,4 @@ def buscar_estudiante():
             return
 
     print("Estudiante no encontrado.")
+    
